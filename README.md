@@ -1,2 +1,2 @@
 # SnakeGame_CPP
-Made a Snake game using OpenGl.It has more abstraction and is better organised than the BadSnake repository. 
+Made a Snake game using OpenGl. The goal of the project was to practice OpenGl and to practice abstraction. 
