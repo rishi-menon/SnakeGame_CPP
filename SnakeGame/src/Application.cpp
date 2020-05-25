@@ -39,7 +39,8 @@ Application::Application() :
    WindowInitEvent windowInitEvent (m_pWindow);
    OnEvent(windowInitEvent);
 
-   glClearColor(1.0f, 0.5f, 1.0f, 1.0f);  //to do move somewhere else
+   const float f = 0.1f;
+   glClearColor(f,f,f, 1.0f);  //to do move somewhere else
 }
 Application::~Application()
 {

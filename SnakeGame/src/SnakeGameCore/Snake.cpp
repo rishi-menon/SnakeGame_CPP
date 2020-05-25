@@ -10,9 +10,9 @@ Snake::Snake(const int blockSize)
    :  m_nCount(1), //1 as there is one block in the trail
       m_nLastPosX (0), m_nLastPosY(0),
       m_cBlockSize (blockSize),
-      m_trailColVal (0.4)
+      m_trailColVal (0.8)  //To do: cleanup for this unused variable AND add a gradient to the tail
 {
-   m_pHead = new Node(0, 0, Color (m_trailColVal, m_trailColVal, m_trailColVal, 0.8f));   //head of the snake
+   m_pHead = new Node(0, 0, Color (0.3, 0.3, 0.8, 0.8f));   //head of the snake
    m_pTail = m_pHead;
 }
 Snake::~Snake()
@@ -134,7 +134,8 @@ void Snake::Grow()
       m_trailColVal = trailMax;
    }
    //the tail of the snake is the first element of the link list 
-   Node* pNode = new Node(m_nLastPosX, m_nLastPosY, Color(m_trailColVal, m_trailColVal, m_trailColVal, 0.8f), m_pTail);
+   
+   Node* pNode = new Node(m_nLastPosX, m_nLastPosY, Color(0.3, 0.3, 0.8, m_trailColVal), m_pTail);
    m_pTail = pNode;
    m_nCount++;
 }
